@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+
+    <title>Kauneushoitola Susanna</title>
+    <link href="tyylit.css" rel="StyleSheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--bootsrapin CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' id='googlefonts-Karla-css' href='https://fonts.googleapis.com/css?family=Karla%3Aregular%2Citalic%2C700%2C700italic&#038;ver=6e0caebf49262e32987cc8a7f4ee362f' type='text/css' media='all' />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+    <div class="container" id="alku">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="#alku"><img src="images/Logo.png" alt="Kauneushoitola" style="width:50px;"></a>
+
+
+
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <a class="nav-link" href="index.html">Etusivu <span class="sr-only"> (current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="palvelut.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Palvelut
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Kosmetologipalvelut.html">Kosmetologipalvelut</a>
+                            <a class="dropdown-item" href="Hieronnat.html">Hieronnat</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Hinnasto.html">Hinnasto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="yhteystiedot.html">Ota yhteyttä</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+   
+
+
+        <div class="hinnasto"><img src="images/kaksi_tulppaania.jpg" id="tulppaaneja" alt="tulppaneja" > </div>
+        <br>
+    
+    
+
+        <h1>Hinnasto</h1>
+    <br>
+   <!-- Haetaan tähän tarjous, joka tallennettu Firebaseen -->
+        <h2 id="otsikko">Ajankohtainen tarjous</h2>
+    
+
+        <!-- haitarimalli-->
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        Kasvohoidot
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-sm-4"><img src="images/nainen.jpg" alt="nainen" width="100" height="120"></div>
+                            <div class="col-sm-8">
+                               
+                                <ul>
+                                    <li>Perinteinen ihonpuhdistus, 58€</li>
+                                    <li>Ihotyypinmukainen kasvohoito, 80€</li>
+                                    <li>Luxus-kasvohoito, 90€</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                        Jalka- ja käsihoidot
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-sm-4"><img src="images/kynsilakat.jpg" alt="koriste" width="140" height="100"></div>
+                            <div class="col-sm-8">
+                               
+                                <ul>
+                                    <li>Suklaakasvohoito, 80€ </li>
+                                    <li>Herkän ihon kasvohoito, 60€</li>
+                                    <li>Erikoiskasvohoito kuivalle iholle, 65 €</li>
+                                    <li>Perinteinen jalkahoito, 55€</li>
+                                    <li>Perinteinen manikyyri, 48€</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                            Hieronnat
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-sm-4"><img src="images/koriste.jpg" alt="koriste" width="100" height="120"></div>
+                                <div class="col-sm-8">
+                                   
+                                    <ul>
+                                        <li>Intialainen päähieronta (45min), 50€</li>
+                                        <li>Niska-hartiahieronta (30min), 45€</li>
+                                        <li>Kasvohieronta(30min), 40€</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                        Meikkaukset
+                    </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-sm-4"><img src="images/meikit.jpg" alt="koriste" width="140" height="100"></div>
+                            <div class="col-sm-8">
+                               
+                                <ul>
+                                    <li>Päivämeikki, 40€</li>
+                                    <li>Juhlameikki, 50€</li>
+                                    <li>Meikkausopastus (60min), 55€</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br>
+        <h3>Päivän mietelause:</h3>
+        <div id="vastaus">  </div>
+
+
+        <script >
+            function haeSananlasku() {
+                // Pyydetään sanalaskua fetch komennolla
+                fetch("https://quotes.rest/qod.json")
+                    // Kun saadaan vastaus, muunnetaan se JSON muotoon
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    // Muunnettu JSON käsitellään eli tiedot näytetään HTML sivulla
+                    .then(function(responseJson) {
+                        document.getElementById("vastaus").innerHTML = "<p>" + responseJson.contents.quotes[0].quote +
+                            "<br>- " + responseJson.contents.quotes[0].author + " -</p>";
+                    })
+                    // Jos tuli jokin virhe
+                    .catch(function(error) {
+                        console.error(error);
+                        document.getElementById("vastaus").innerHTML = "<p>Jokin meni pieleen<br></p>";
+                    })
+            }
+
+            // Funktion kutsu
+            haeSananlasku();
+             </script>
+    
+    
+          <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD0lXZjHz6VK_2SgyZlJRbJevXBweNCdgY",
+            authDomain: "digitekniikat-21eb1.firebaseapp.com",
+            databaseURL: "https://digitekniikat-21eb1.firebaseio.com",
+            projectId: "digitekniikat-21eb1",
+            storageBucket: "digitekniikat-21eb1.appspot.com",
+            messagingSenderId: "407786448662",
+            appId: "1:407786448662:web:9b5202e9bc55ca1b629237",
+            measurementId: "G-0MZPE3WZJZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // oma scripti        
+        var firebaseRef = firebase.database();
+        
+    
+        
+        // tarjous firebasesta otsikko-kohtaan
+        var fireHeading = document.getElementById("otsikko");
+        var firebaseHeadingRef = firebase.database().ref().child("Tarjous");
+
+        firebaseHeadingRef.on('value', function(datasnapshot) {
+            fireHeading.innerText = datasnapshot.val();
+        });
+        
+    </script>
+       
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+        <div class="footer">
+            <br>
+            <p> Kauneushoitola Susanna <br> Kauppakatu 10 a 1 <br> 40100 Jyväskylä<br>
+                Puh. 040 124 1345</p>
+        </div>
+</body></html>
